@@ -1,0 +1,18 @@
+{% extends 'horoscope_base.html' %}
+
+{% block title %}
+    Receive Your Horoscope
+{% endblock %}
+
+{% block content %}
+    {% if show_horoscopes %}
+        You are so:
+        <ul>
+            {% for horoscope in horoscopes %}
+                {% include 'horoscope.html' %}
+            {% endfor %}
+        </ul>
+    {% else %}
+        Have a nice day!
+    {% endif %}
+{% endblock %}

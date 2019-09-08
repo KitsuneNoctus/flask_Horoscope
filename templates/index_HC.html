@@ -1,0 +1,36 @@
+{% extends 'horoscope_base.html' %}
+
+{% block title %}
+    Enter Your Info
+{% endblock %}
+
+{% block body %}
+<form action='/compliment'>
+    <p>
+        What is your name?
+        <input type="text" name="name"/>
+    </p>
+    <p>
+        <input type="checkbox" name="show_compliments"/>
+        Show Horoscope
+    </p>
+    <p>
+        What is your sign?
+        <select name="num_compliments">
+            <option value="1">Aquarius</option>
+            <option value="2">Pisces</option>
+            <option value="3">Aries</option>
+            <option value="4">Taurus</option>
+            <option value="5">Gemini</option>
+            <option value="6">Cancer</option>
+            <option value="7">Leo</option>
+            <option value="8">Virgo</option>
+            <option value="9">Libra</option>
+            <option value="10">Scorpio</option>
+            <option value="11">Sagitarius</option>
+            <option value=12>Capricorn</option>
+        </select>
+    </p>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
